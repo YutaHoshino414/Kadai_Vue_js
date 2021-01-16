@@ -11,9 +11,11 @@
             名前：<input v-model="name">
             コース：<input v-model="course">
             受講期：<input v-model="acceptancePeriod">
-            <br>
+            <br><br>
+            <div>{{counter}}/名前：{{name}}/コース：{{course}}/受講期: {{acceptancePeriod}}</div>
             <!-- button v-on:click="addStudent"で、buttonがclickされた時に起動するメソッドを選択する -->
             <button v-on:click="addStudent">入力した生徒を追加する</button>
+
             <ul>
                 <!-- v-for="student in students" で、配列studentsを一つ一つ切り出して変数studentに代入している -->
                 <!-- v-bind:key="student.id"は、切り出された各要素の一意性を確保するために使う -->

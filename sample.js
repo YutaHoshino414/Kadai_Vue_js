@@ -3,6 +3,8 @@ new Vue({
   el: '#app',
   // dataは、定義されたVue.jsのインスタンスが持つ属性（値）
   data: {
+    counter:0,
+
     name: 'A山B郎',
     course: 'Webエンジニアコース',
     acceptancePeriod: '2019年01月期',
@@ -18,7 +20,23 @@ new Vue({
     addStudent: function() {
         // この function() { } の中にaddStudentメソッド
         // （入力欄に入力された値と、ID値（最後に登録されたID値+1の値）が新たに出現する機能）の処理を書く
-      alert();
+      // this.counter +=1
+      // this.name
+      // this.course
+      // this.acceptancePeriod
+      this.defaultLastId +=1
+
+      var hash = {
+       id: this.defaultLastId,
+       name: this.name,
+       course: this.course,
+       acceptancePeriod: this.acceptancePeriod
+     };
+
+     this.students.push(hash);
+     // this.name = ""
+     // this.course = ""
+     // this.acceptancePeriod = ""
     }
   }
 })
